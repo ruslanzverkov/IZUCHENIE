@@ -6,13 +6,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-   @GetMapping
+    private final HelloService helloService;
+
+    public HelloController(HelloService helloService) {
+        this.helloService = helloService;
+    }
+
+    @GetMapping
     public String hello() {
-        return "Hello";
+        return helloService.hello();
     }
 
     @GetMapping(path="/Hello")
     public String answerHello(@RequestParam("name")String userName) {
-        return "Hello";
+        return helloService.answerHello(userName);
     }
+
 }
