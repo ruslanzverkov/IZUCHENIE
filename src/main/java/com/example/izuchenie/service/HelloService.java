@@ -1,4 +1,4 @@
-package com.example.izuchenie;
+package com.example.izuchenie.service;
 
 public interface HelloService {
     String hello();

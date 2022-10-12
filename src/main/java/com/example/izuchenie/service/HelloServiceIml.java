@@ -1,5 +1,6 @@
-package com.example.izuchenie;
+package com.example.izuchenie.service;
 
+import com.example.izuchenie.service.HelloService;
 import org.springframework.stereotype.Service;
 
 @Service
